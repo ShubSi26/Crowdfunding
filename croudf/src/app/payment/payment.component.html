@@ -1,0 +1,46 @@
+
+<div class="mainscreen">
+      <div class="card">
+        <div class="rightside">
+          <form #f="ngForm" (submit)="getFieldValue($event,f.value)">
+            <h1>Donate</h1>
+            <h2>Payment Information</h2>
+            <p>Cardholder Name</p>
+            <input type="text" class="inputbox" ngModel name="name" required />
+            <p>Card Number</p>
+            <input type="number" class="inputbox" ngModel name="card_number" id="card_number" required />
+
+            <p>Card Type</p>
+            <select ngModel class="inputbox" name="card_type" id="card_type" required>
+              <option value="">--Select a Card Type--</option>
+              <option value="Visa">Visa</option>
+              <option value="RuPay">RuPay</option>
+              <option value="MasterCard">MasterCard</option>
+            </select>
+<div class="expcvv">
+
+            <p class="expcvv_text">Expiry</p>
+            <input type="date" class="inputbox" ngModel name="exp_date" id="exp_date" required />
+
+            <p class="expcvv_text2">CVV</p>
+            <input type="text" class="inputbox" ngModel name="cvv" id="cvv" required>
+            
+        </div>
+        <p>Enter Amount</p>
+            <input type="number" class="inputbox" ngModel id = "amnt" name="ammount">
+            <p></p>
+            <button type="submit" class="button">Pay</button>
+          </form>
+        </div>
+        <div>
+            <div id = "detail">
+                <h1 class="display-6 fs-4">You are Donating to {{prgi.username}}'s project</h1>
+            </div>
+            <div>
+                <h1 class = "display-6">Title-</h1>
+                <p class="fs-5 pp" >{{prgi.Title}}</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  

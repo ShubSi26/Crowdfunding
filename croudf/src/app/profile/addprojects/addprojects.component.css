@@ -1,0 +1,10 @@
+#frm div{
+    margin-top: 50px;
+}
+textarea{
+    height: auto; /* Allow the textarea to expand automatically */
+    overflow-y: hidden;
+}
+.l{
+    height:100px
+}

@@ -1,0 +1,156 @@
+body{
+    margin: 0px;;
+    padding: 0px;
+}
+#contact-us {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+#contact-us img{
+    width: 100px;
+    height: 100px;
+}
+#contact-us div{
+    padding: 5px;
+    background-color: rgb(255, 227, 149);
+    height: 450px;
+    width: auto;
+    border-radius: 7px;
+}
+#nav{
+    background:none;
+    z-index: 5;
+    position: fixed;
+    width: 101%;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+#nav div{
+    border-radius: 15px;
+}
+#slides{
+height: auto;
+overflow: hidden;
+object-fit: cover;
+}
+.contnt{
+height: auto;
+padding-left: 1vw;
+padding-right: 1vw;
+padding-top:  5vw;
+display: flex;
+justify-content: center; 
+flex-wrap: wrap;
+}
+.contnt img{
+width: 400px;
+height: 400px;
+max-width: 100%;
+max-height: 100%;
+}
+.contnt div{
+margin: 10px;
+width: 50%;
+}
+.contnt div p{
+font-size: 3vh;
+font-family: "Raleway", sans-serif;
+}
+.contnt p span{
+font-weight: 700;
+}
+#stat{
+background-color: #D9AFD9;
+background-image: linear-gradient(70deg, #D9AFD9 0%, #97D9E1 100%);
+margin:0% 10% 0% 10%;
+border-radius: 20px;
+padding: 2% 2% 3% 2%;
+height: auto;
+display: flex;
+justify-content: center; 
+flex-wrap: wrap;
+justify-content: space-between;
+border: 10px double white;
+}
+#stat h1{
+width: 100%;
+padding-bottom: 5%;
+text-align: center;
+font-family: "Kanit", sans-serif;
+transition: 0.3s;
+}
+#stat h1:hover{
+color: rgb(52, 34, 255);
+text-decoration: underline;
+}
+#stat div{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#stat div div{
+font-size: xx-large;
+}
+#stat div img{
+width: 100px;
+}
+#optn{  
+height: auto;
+min-height: 400px;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-evenly;
+background-image: url("../../assets/bgr.png");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+}
+#optn div{
+background: transparent;
+display: flex;
+flex-direction: column;
+align-items: center;
+transition: 0.5s;
+}
+#optn div:hover{
+backdrop-filter: blur(5px);
+border-radius: 20px;
+padding-top: 30px;
+cursor: alias;
+border: 2px solid rgb(191, 191, 191);
+}
+#optn div img{
+height: 60%;
+width: 60%;
+}
+#optn div p{
+font-size: xx-large;
+}
+#fnc{
+background-image: url("../../assets/rbn.png");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+padding-top: 8%;
+padding-bottom: 8%;
+}
+#fnc button{
+color: white;
+backdrop-filter: blur(15px);
+font-size: 40px;
+height: auto;
+width: auto;
+}
+#fnc div{
+padding: 15px;
+}
+#faq{
+padding-top: 2%;
+padding-bottom: 2%;
+}
+#faq div{
+width: 100%;
+}

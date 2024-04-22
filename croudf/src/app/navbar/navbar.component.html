@@ -1,0 +1,24 @@
+<div class="container-fluid" >
+    <div id ="nav" class="row" [ngClass]="{'scrolled': isScrolled}">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <div class="col-1"></div>
+                <a routerLink="" class="navbar-brand fs-1 fw-bold" href="#">
+                    <img src="assets/logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+                    Crowdfunding
+                  </a>
+              <div class="collapse navbar-collapse justify-content-end">
+                <div class="navbar-nav ">
+                  <a routerLink="" class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a  class="nav-link" href="#contnto">About Us</a>
+                  <a routerLink="./progct" class="nav-link" href="#">Browse Projects</a>
+                  <a class="nav-link" href="#">Contact Us</a>
+                  <a routerLink="/login" class="nav-link" href="#">Login</a>
+                  <a routerLink="/profile" class="nav-link" href="#">Profile</a>
+                </div>
+              </div>
+              <div class="col-1"></div>
+            </div>
+          </nav>
+    </div>
+</div>

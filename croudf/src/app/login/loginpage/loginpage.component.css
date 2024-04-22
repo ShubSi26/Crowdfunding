@@ -1,0 +1,31 @@
+#mbx{
+    background-image: url("../../../assets/backg1.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:100%;
+    padding-top: 150px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+#dv{
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    color: rgb(37, 103, 255);
+    text-align: center;
+    text-decoration:solid;
+    font-weight: 850;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    
+}

@@ -1,0 +1,23 @@
+<div id = "profile">
+    <div>
+        <div>
+            <img src="assets/profilelogo.png" class="rounded-circle" alt="" width="340px">
+        </div>
+        <h2 class="display-5">Your Details</h2>
+        <div>
+            <h4 class="display-6">Name: {{response.name}}</h4>
+            <h4 class="display-6">E-mail: {{response.email}}</h4>
+        </div>
+    </div>
+    <div id = "prs">
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="button" (click)="toggleCondition()">{{ buttonText }}</button>
+          </div>
+        <div id = "gg" *ngIf="isConditionTrue">
+            <div *ngFor="let prg of projects" >
+            <app-displayprojects [prgi]="prg" ></app-displayprojects>
+            </div>
+        </div>
+        <app-addprojects *ngIf="!isConditionTrue"></app-addprojects>
+    </div>
+</div>

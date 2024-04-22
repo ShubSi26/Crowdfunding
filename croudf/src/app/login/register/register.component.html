@@ -1,0 +1,27 @@
+<div class="container-fluid" id = "mbx">
+    <app-baseinlud></app-baseinlud>
+    <div id = "dv"> 
+        <button [routerLink]="['/login']" type="button" class="btn btn-primary btn-lg"  >Login</button>
+        <button  type="button" class="btn btn-primary btn-lg" disabled>Register</button>
+        <br>
+        <form #f="ngForm" (submit)="getreq($event,f.value)">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input type="text" name="name" ngModel class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" name="email" ngModel class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" name="password" ngModel class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">I accept terms and conditions</label>
+              </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+    </div>
+  </div>

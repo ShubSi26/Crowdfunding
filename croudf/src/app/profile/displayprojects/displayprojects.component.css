@@ -1,0 +1,9 @@
+.outer-div {
+    padding: 20px; /* Add padding to create some space */
+    transition: background-color 0.3s; /* Add transition for smooth color change */
+    padding-bottom: 60px;
+}
+
+.outer-div:hover {
+    background-color: white; /* Change background color on hover */
+}

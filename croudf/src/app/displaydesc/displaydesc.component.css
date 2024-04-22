@@ -1,0 +1,25 @@
+#mx{
+    padding: 200px;
+    background-image: url("../../assets/backg1.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:100%;
+}
+#ibx{
+    
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+#ibx div{
+    background-color: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 10px;
+}
+#ibx h2{
+    text-align: center;
+}
+#ibx h4{
+    text-align: center;
+}

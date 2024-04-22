@@ -1,0 +1,16 @@
+h1{
+
+    text-align: center;
+}
+.l{
+    height: 100vh;
+    background-image: url("../../assets/backg1.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,17 @@
+
+#bx{
+    padding-top: 5%;
+    background-image: url("../assets/backg1.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:100%;
+    display: flex;
+    flex: 0% 0% 33.33%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#footr{
+    border-top: 3px solid gray;
+    height: 200px;
+    background-color: rgb(250, 250, 250);
+}

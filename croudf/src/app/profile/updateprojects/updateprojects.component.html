@@ -1,0 +1,23 @@
+<div class="dv">
+    <form #f="ngForm" (ngSubmit)="update($event,f.value)">
+        <div class="form-floating">
+            <h2>Update Title</h2>
+            <textarea class="form-control" name = "Title" ngModel placeholder="Title" id="floatingTextarea" [(ngModel)]="prgi.Title"></textarea>
+          </div>
+          <div class="form-floating">
+            <h2>Update Summary</h2>
+            <textarea class="form-control l" name = "Summary" ngModel placeholder="Summary" id="floatingTextarea" [(ngModel)]="prgi.Summary"></textarea>
+          </div>
+          <div class="form-floating">
+            <h2>Update Description</h2>
+            <textarea class="form-control l" name = "Description" ngModel placeholder="Description" id="floatingTextarea" [(ngModel)]="prgi.Description"></textarea>
+          </div>
+          <div class="form-floating">
+            <h2>Update Target Amount</h2>
+            <input type="number" name="Target_Amount" ngModel placeholder="Amount" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="prgi.Target_Amount">
+          </div>
+          <br>
+          <button type="submit" class="btn btn-success">Subbmit</button>
+          <button routerLink="/profile" class="btn btn-success">close</button>
+    </form>
+</div>

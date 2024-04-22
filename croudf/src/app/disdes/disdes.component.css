@@ -1,0 +1,26 @@
+#box {
+    border: 5px solid blue;
+    overflow: hidden;
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: none;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+#box:hover {
+    background-image: url("../../assets/back.svg");
+    height: 400px;
+}
+
+button{
+    width: 100%;
+}
+#box h2{
+    text-align: center;
+}

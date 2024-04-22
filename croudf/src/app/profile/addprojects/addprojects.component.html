@@ -1,0 +1,22 @@
+<div>
+    <form #f="ngForm" (ngSubmit)="getreq($event,f.value)">
+        <div class="form-floating">
+            <h2>Add Title</h2>
+            <textarea class="form-control" name = "Title" ngModel placeholder="Title" id="floatingTextarea"></textarea>
+          </div>
+          <div class="form-floating">
+            <h2>Add Summary</h2>
+            <textarea class="form-control l" name = "Summary" ngModel placeholder="Summary" id="floatingTextarea"></textarea>
+          </div>
+          <div class="form-floating">
+            <h2>Add Description</h2>
+            <textarea class="form-control l" name = "Description" ngModel placeholder="Description" id="floatingTextarea"></textarea>
+          </div>
+          <div class="form-floating">
+            <h2>Target Amount</h2>
+            <input type="number" name="Target_Amount" ngModel placeholder="Amount" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <br>
+          <button type="submit" class="btn btn-success">Subbmit</button>
+    </form>
+</div>
