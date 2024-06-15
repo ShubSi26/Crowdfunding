@@ -27,3 +27,16 @@ img{
     height: 100%;
     overflow: scroll;
 }
+@media screen and (max-width: 600px) {
+    #profile{
+        flex-direction: column;
+        padding-top: 50px;
+        align-items: center;
+    }
+    #prs{
+        width: 80%;
+    }
+    .det{
+        padding:20px;
+    }
+}

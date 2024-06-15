@@ -3,6 +3,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size:100%;
+    background-size: cover;
     padding-top: 150px;
     height: 100vh;
     display: flex;
@@ -29,3 +30,11 @@ form{
     flex-direction: column;
     
 }
+@media screen and (max-width: 600px) {
+    .lgn{
+        display: none;
+        font-size: large;
+        text-align: center;
+    }
+}
+
