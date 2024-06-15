@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'croudf';
+  title = 'Croudfunding';
   public static rooturl = "http://localhost:3000";
 }

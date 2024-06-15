@@ -1,3 +1,4 @@
+
 body{
     margin: 0px;;
     padding: 0px;
@@ -19,18 +20,6 @@ body{
     width: auto;
     border-radius: 7px;
 }
-#nav{
-    background:none;
-    z-index: 5;
-    position: fixed;
-    width: 101%;
-    top: 0;
-    left: 0;
-    transition: 0.3s;
-}
-#nav div{
-    border-radius: 15px;
-}
 #slides{
 height: auto;
 overflow: hidden;
@@ -38,8 +27,8 @@ object-fit: cover;
 }
 .contnt{
 height: auto;
-padding-left: 1vw;
-padding-right: 1vw;
+padding-left: 20px;
+padding-right: 20px;
 padding-top:  5vw;
 display: flex;
 justify-content: center; 
@@ -154,3 +143,46 @@ padding-bottom: 2%;
 #faq div{
 width: 100%;
 }
+
+
+@media screen and (max-width: 600px) {
+    .contnt{
+        padding: 20px 0px 0px 0px;
+    }
+    .contnt div{
+        margin: 0px;
+        width: auto;
+    }
+    .contnt div p{
+        font-size: 3vh;
+        border-top: 5px solid rgb(197, 194, 194);
+        border-bottom: 5px solid rgb(197, 194, 194);
+        padding: 20px 10px 0px 10px;
+        height: fit-content;
+        text-align: justify;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .contnt div h1{
+        text-align: center;
+    }
+    .contnt img{
+        width: 90vw;
+        height: 90vw;
+        border: 2px solid rgb(197, 194, 194);
+        border-radius: 5px;
+        padding: 0px;
+        margin: 0px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .hide {
+        display: none;
+    }
+    #stat{
+        flex-direction: column;
+    }
+    #fnc{
+        padding: 0px;
+        box-shadow: 20px 20px 20px rgba(7, 59, 164, 0.2);
+        margin: 0px 0px 20px 0px;
+    }
+  }
