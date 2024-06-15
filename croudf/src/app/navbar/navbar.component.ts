@@ -8,6 +8,7 @@ import { Component, HostListener } from '@angular/core';
 })
 export class NavbarComponent {
   isScrolled = false;
+  isMobile: boolean = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -16,5 +17,16 @@ export class NavbarComponent {
     } else {
       this.isScrolled = false;
     }
+  }
+  onResize(event: Event) {
+    this.checkScreenSize();
+  }
+
+  ngOnInit() {
+    this.checkScreenSize();
+  }
+
+  private checkScreenSize() {
+    this.isMobile = window.innerWidth < 600;
   }
 }

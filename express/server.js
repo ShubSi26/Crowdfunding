@@ -1,4 +1,4 @@
-
+const path = require('path');
 const express = require('express')
 const {ObjectId} = require('mongodb')
 const cors = require('cors');
@@ -10,6 +10,8 @@ const port = 3000
 app.use(cors());
 app.use(bodyParser.json());
 let db;
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 connectToDb((err)=>{
   if(!err){
@@ -146,3 +148,7 @@ app.post('/',(req,res)=>{
   console.log("req.bofgndy");
   res.end();
 })
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
+});
