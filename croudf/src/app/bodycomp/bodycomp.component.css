@@ -181,8 +181,11 @@ width: 100%;
         flex-direction: column;
     }
     #fnc{
-        padding: 0px;
+        padding: 15px;
         box-shadow: 20px 20px 20px rgba(7, 59, 164, 0.2);
         margin: 0px 0px 20px 0px;
+    }
+    #fnc button {
+        font-size:x-large;
     }
   }

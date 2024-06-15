@@ -25,6 +25,10 @@ background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     .nav{
         position: absolute;
     }
+    .smal{
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @media screen and (min-width: 600px) {
