@@ -111,3 +111,33 @@ p{
 .pp{
     width: 70%;
 }
+@media screen and (max-width: 600px) {
+    .card {
+        width: 100%;
+        flex-direction: column;
+    }
+    .leftside {
+        width: 100%;
+        border-radius: 1.5rem;
+    }
+    .rightside {
+        width: 100%;
+        border-radius: 1.5rem;
+    }
+    .product {
+        width: 10em;
+        height: 10em;
+    }
+    #detail{
+        width: 100%;
+    }
+    .pp{
+        width: 100%;
+    }
+    .box{
+        padding: 20px;
+    }
+    .mainscreen{
+        padding: 70px 15px 15px 15px;
+    }
+}

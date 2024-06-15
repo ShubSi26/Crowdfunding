@@ -13,4 +13,10 @@
     justify-content: center;
     max-height: fit-content;
     min-height: 100vh;
+    background-size: cover;
+}
+@media screen and (max-width: 600px) {
+    #obx{
+        padding-top: 10%;
+    }
 }

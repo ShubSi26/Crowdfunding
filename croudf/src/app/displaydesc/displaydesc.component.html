@@ -1,6 +1,7 @@
 <div id = "mx">
-    <button type="button" class="btn btn-primary btn-lg" [routerLink]="['/progct']">Go Back</button>
+    <div class="d-flex justify-content-around"><button type="button" class="btn btn-primary btn-lg" [routerLink]="['/progct']">Go Back</button>
     <div class="d-flex justify-content-end"><p class="fs-3"><img src="assets/profilelogo.png" width="40px" class="rounded-circle" style="background-color: white;"> {{prgi.username}}</p></div>
+    </div>
     <h1>{{prgi?.Title}}</h1>
     <h2>{{prgi?.Summary}}</h2>
     <h2 class="display-6">Description-</h2>
@@ -9,7 +10,7 @@
         <div>
             <h2>Target Amount</h2>
             <h4>{{prgi.Target_Amount}}$</h4>
-        </div>
+        </div><br>
         <div>
             <h2>Funds Collected</h2>
             <h4>{{prgi.fundcollected}}$</h4>

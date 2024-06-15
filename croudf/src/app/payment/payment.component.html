@@ -32,7 +32,7 @@
             <button type="submit" class="button">Pay</button>
           </form>
         </div>
-        <div>
+        <div class="box">
             <div id = "detail">
                 <h1 class="display-6 fs-4">You are Donating to {{prgi.username}}'s project</h1>
             </div>
@@ -40,6 +40,8 @@
                 <h1 class = "display-6">Title-</h1>
                 <p class="fs-5 pp" >{{prgi.Title}}</p>
             </div>
+            <button type="button" class="btn btn-primary btn-lg" [routerLink]="['/progct']">Go Back</button>
+      
         </div>
       </div>
     </div>

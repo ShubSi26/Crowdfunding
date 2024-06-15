@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size:100%;
+    background-size: cover;
 }
 #ibx{
     
@@ -16,10 +17,20 @@
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 #ibx h2{
     text-align: center;
 }
 #ibx h4{
     text-align: center;
+}
+@media screen and (max-width: 600px) {
+    #mx{
+        padding: 110px 20px 50px 20px;
+    }
+    #ibx{
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
