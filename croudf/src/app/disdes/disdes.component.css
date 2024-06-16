@@ -1,5 +1,5 @@
 #box {
-    border: 5px solid blue;
+    
     overflow: hidden;
     width: 300px;
     height: 350px;
@@ -23,4 +23,12 @@ button{
 }
 #box h2{
     text-align: center;
+}
+.ll{
+    background-color: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: justify;
 }

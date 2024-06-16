@@ -5,7 +5,8 @@
     background-size:100%;
     background-size: cover;
     padding-top: 150px;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     justify-content: space-around;
 }
@@ -16,8 +17,10 @@
     border-radius: 10px;
     width: 400px;
     height: auto;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
+    
 }
 h1{
     color: rgb(37, 103, 255);

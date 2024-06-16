@@ -9,11 +9,13 @@ import { Project } from '../Project';
 export class DisplaydescComponent {
   constructor(private route: ActivatedRoute) {}
   prgi: any;
+  title: any;
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.prgi = history.state.project as Project;
       console.log(this.prgi); 
+      this.title = (this.prgi.username).substring(0, 14);
     });
   }
 }

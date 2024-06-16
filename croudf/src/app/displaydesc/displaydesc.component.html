@@ -1,11 +1,11 @@
 <div id = "mx">
     <div class="d-flex justify-content-around"><button type="button" class="btn btn-primary btn-lg" [routerLink]="['/progct']">Go Back</button>
-    <div class="d-flex justify-content-end"><p class="fs-3"><img src="assets/profilelogo.png" width="40px" class="rounded-circle" style="background-color: white;"> {{prgi.username}}</p></div>
-    </div>
-    <h1>{{prgi?.Title}}</h1>
-    <h2>{{prgi?.Summary}}</h2>
+    <div class="d-flex justify-content-end"><p class="fs-3"><img src="assets/profilelogo.png" width="40px" class="rounded-circle" style="background-color: white;"> {{title}}</p></div>
+    </div><br>
+    <h1 class="bbx text-center">{{prgi?.Title}}</h1>
+    <h2 class="bbx">{{prgi?.Summary}}</h2>
     <h2 class="display-6">Description-</h2>
-    <p class="fs-5">{{prgi?.Description}}</p>
+    <p class="fs-5 bbx jb">{{prgi?.Description}}</p>
     <div id = "ibx">
         <div>
             <h2>Target Amount</h2>
