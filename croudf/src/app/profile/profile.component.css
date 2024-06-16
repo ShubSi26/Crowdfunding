@@ -34,9 +34,17 @@ img{
         align-items: center;
     }
     #prs{
-        width: 80%;
+        width: 90%;
     }
     .det{
         padding:20px;
     }
+}
+
+.bxx{
+    background-color: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
