@@ -15,7 +15,7 @@ export class DisplaydescComponent {
     this.route.paramMap.subscribe(params => {
       this.prgi = history.state.project as Project;
       console.log(this.prgi); 
-      this.title = (this.prgi.username).substring(0, 14);
+      this.title = (this.prgi.name).substring(0, 14);
     });
   }
 }

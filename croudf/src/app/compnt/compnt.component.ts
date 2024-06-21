@@ -15,7 +15,7 @@ export class CompntComponent implements OnInit{
   }
   constructor(private http:HttpClient){}
   getrecord():any{
-    this.http.get<any>(AppComponent.rooturl + "/projectlist")
+    this.http.get<any>(AppComponent.rooturl + "/project")
     .subscribe(
       response => {
         console.log('POST request successful2:', response);

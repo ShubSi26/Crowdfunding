@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AppComponent } from '../../app.component';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ProfileComponent } from '../profile.component';
 
@@ -16,11 +16,12 @@ export class AddprojectsComponent {
     console.log(val);
     val.fundcollected=0;
     val.id = sessionStorage.getItem('id');
-    this.http.post<any>(AppComponent.rooturl + "/addproject", val)
+    const id :any = sessionStorage.getItem('id');
+    const headers = new HttpHeaders({"authorization":  id})
+    this.http.post<any>(AppComponent.rooturl + "/project/addproject", val,{ headers: headers })
     .subscribe(
       response => {
         console.log('POST request successful:', response);
-        //this.router.navigate(['/profile'], { queryParams: { reload: true } });
         window.location.href="/profile";
       },
       error => {

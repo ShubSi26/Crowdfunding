@@ -22,17 +22,14 @@ export class RegisterComponent {
     this.ormData.email = val.email;
     this.ormData.password = val.password;
     this.ormData.name = val.name;
-    this.http.post<any>(AppComponent.rooturl + "/register", this.ormData)
+    this.http.post<any>(AppComponent.rooturl + "/auth/register", this.ormData)
       .subscribe(
         response => {
-          console.log('POST request successful:', response);
-          sessionStorage.setItem('id', response.insertedId);
-          console.log("added to session storage");
+          sessionStorage.setItem('id', response.token);
           this.router.navigate(['/profile']);
         },
         error => {
           console.error('POST request failed:', error);
-          // Handle error as needed
         }
       );
   }

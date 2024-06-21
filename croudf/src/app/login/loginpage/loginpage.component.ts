@@ -20,13 +20,13 @@ export class LoginpageComponent {
     console.log(val);
     this.ormData.email = val.email;
     this.ormData.password = val.password;
-    this.http.post<any>(AppComponent.rooturl + "/login", this.ormData)
+    this.http.post<any>(AppComponent.rooturl + "/auth/login", this.ormData)
       .subscribe(
         response => {
           console.log('POST request successful:', response);
           // Handle response as needed
           console.log(response._id);
-          sessionStorage.setItem('id', response._id);
+          sessionStorage.setItem('id', response.token);
           this.router.navigate(['/profile']);
         },
         error => {

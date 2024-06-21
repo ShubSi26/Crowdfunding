@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders  } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
 import { response } from 'express';
@@ -25,24 +25,29 @@ export class ProfileComponent implements OnInit{
   }
   recordf():void{
     this.isConditionTrue  =true;
-    const data = sessionStorage.getItem('id');
-    console.log(data);
-    this.http.post<any>(AppComponent.rooturl + "/profiledetails", {id: data})
+    const data : any = sessionStorage.getItem('id');
+    const headers = new HttpHeaders({"authorization": data })
+    this.http.post<any>(AppComponent.rooturl + "/profiledetails", {token: data},{ headers: headers })
     .subscribe(
       response => {
         console.log('POST request successful:', response);
         this.response = response;
-        this.projects = response.projects;
-        let i=0;
-        this.projects.forEach((p:any) => {
-            p.ind = i;
-            i++;
-        });
       },
       error => {
         console.error('POST request failed:', error);
       }
     );
+    this.http.get<any>(AppComponent.rooturl + "/project/userprojects",{ headers: headers })
+    .subscribe(
+      response => {
+        console.log('POST request successful:', response);
+        this.projects = response;
+      },
+      error => {
+        console.error('POST request failed:', error);
+      }
+    );
+
   }
   toggleCondition(): void {
     this.isConditionTrue = !this.isConditionTrue;
