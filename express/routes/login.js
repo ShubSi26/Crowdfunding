@@ -4,6 +4,7 @@ const zod = require("zod");
 const bodyParser = require("body-parser");
 const {connectToDb,getDB} = require("./mongoc")
 const jwt  = require("jsonwebtoken");
+const {jwtSecret} = require("../secret");
 
 router.use(bodyParser.json());
 
@@ -29,7 +30,7 @@ router.post('/login',async(req,res)=>{
       res.end();
       return;
     }
-    const token = jwt.sign({key:result._id},"dropa");
+    const token = jwt.sign({key:result._id},jwtSecret);
 
     res.status(200).json({token}); 
     res.end();
@@ -59,7 +60,7 @@ router.post('/login',async(req,res)=>{
       res.end();
       return;
     }
-    const token = jwt.sign({key:created.insertedId},"dropa");
+    const token = jwt.sign({key:created.insertedId},jwtSecret);
 
     res.status(200).json({token});
 

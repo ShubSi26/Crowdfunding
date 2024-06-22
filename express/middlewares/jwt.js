@@ -1,6 +1,6 @@
 
 const jwt = require("jsonwebtoken");
-const JWT_SECRET = "dropa";
+const{jwtSecret} = require("../secret");
 
 const JWTMiddleware = (req, res, next) => {
     const authHeader = req.headers.authorization;
@@ -12,7 +12,7 @@ const JWTMiddleware = (req, res, next) => {
     const token = authHeader;
 
     try {
-        const decoded = jwt.verify(token, JWT_SECRET);
+        const decoded = jwt.verify(token, jwtSecret);
         req.id = decoded.key;
         next();
     } catch (err) {
