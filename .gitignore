@@ -1,6 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-secret.js
+./express/secret.js
 
 # Node
 croudf/node_modules

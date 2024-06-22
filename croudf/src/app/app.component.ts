@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Croudfunding';
-  public static rooturl = "https://glowing-sniffle-5jp475994rjc49v5-3000.app.github.dev";
+  public static rooturl = ".";
 }
