@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AppComponent } from '../app.component';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-payment',
@@ -25,11 +25,12 @@ export class PaymentComponent {
     console.log(b);
     let amt = b.amnt;
     let sd = {
-      id:this.prgi.id,
-      index:this.prgi.index,
+      id:this.prgi._id,
       amount:b.ammount
     };
-    this.http.post<any>(AppComponent.rooturl + "/payment", sd)
+    const data : any = sessionStorage.getItem('id');
+    const headers = new HttpHeaders({"authorization": data })
+    this.http.post<any>(AppComponent.rooturl + "/payment", sd,{ headers: headers })
     .subscribe(
       response => {
         console.log('POST request successful:', response);

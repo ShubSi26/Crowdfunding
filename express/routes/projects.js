@@ -30,6 +30,36 @@ router.post('/addproject',JWTMiddleware,async(req,res)=>{
     res.end();
   })
 
+
+  router.post('/delete',JWTMiddleware,(req,res)=>{
+    const {id} = req.body;
+
+    const result = db.collection("projects").deleteOne({_id: new ObjectId(id)});
+
+    if(!result){
+      res.status(400).json({error:"Invalid credentials"});
+      res.end();
+      return;
+    }
+    res.status(200).json(result);
+    res.end();
+  });
+
+  router.post('/update',async(req,res)=>{
+    const id = req.body.id;
+    delete req.body.id;
+    const result = await db.collection("projects").updateOne({_id: new ObjectId(id)},{$set:req.body});
+
+    if(!result){
+      res.status(400).json({error:"Invalid credentials"});
+      res.end();
+      return;
+    }
+    res.status(200).json(result);
+    res.end();
+
+  });
+
   router.get('/userprojects',JWTMiddleware, async(req, res) => {
 
     const result = await db.collection("projects").find({userid: req.id}).toArray();
@@ -61,7 +91,6 @@ router.post('/addproject',JWTMiddleware,async(req,res)=>{
         element.name = user.name;
       }
     }
-    console.log(result);
     res.status(200).json(result);
     res.end();
   });

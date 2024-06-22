@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AppComponent } from '../../app.component';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-updateprojects',
@@ -21,7 +21,6 @@ export class UpdateprojectsComponent {
 
   async update(event: Event, val: any){
     event.preventDefault();
-    await this.delt();
     val.fundcollected = this.prgi.fundcollected;
     await this.getreq(event, val);
   }
@@ -29,8 +28,10 @@ export class UpdateprojectsComponent {
   getreq(event: Event, val: any) {
     event.preventDefault();
     console.log(val);
-    val.id = sessionStorage.getItem('id');
-    this.http.post<any>(AppComponent.rooturl + "/addproject", val)
+    val.id = this.prgi._id;
+    const data : any = sessionStorage.getItem('id');
+    const headers = new HttpHeaders({"authorization": data })
+    this.http.post<any>(AppComponent.rooturl + "/project/update", val,{ headers: headers })
     .subscribe(
       response => {
         console.log('POST request successful:', response);
@@ -41,19 +42,6 @@ export class UpdateprojectsComponent {
       }
     );
   }
-  delt():void{
-    const d:any = {
-      id:sessionStorage.getItem('id'),
-      index:this.prgi.ind
-    }
-    this.http.delete<any>(AppComponent.rooturl + "/deleteproject", { body: d })
-    .subscribe(
-      response => {
-        console.log('POST request successful:', response);
-      },
-      error => {
-        console.error('POST request failed:', error);
-      }
-    );
-  }
 }
+
+

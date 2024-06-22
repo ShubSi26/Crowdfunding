@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { AppComponent } from '../../app.component';
 import { Router } from '@angular/router';
@@ -18,10 +18,11 @@ export class DisplayprojectsComponent implements OnInit{
   }
   delt():void{
     const d:any = {
-      id:sessionStorage.getItem('id'),
-      index:this.prgi.ind
+      id:this.prgi._id
     }
-    this.http.delete<any>(AppComponent.rooturl + "/deleteproject", { body: d })
+    const data : any = sessionStorage.getItem('id');
+    const headers = new HttpHeaders({"authorization": data })
+    this.http.post<any>(AppComponent.rooturl + "/project/delete",d,{headers : headers} )
     .subscribe(
       response => {
         console.log('POST request successful:', response);
