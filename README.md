@@ -6,7 +6,7 @@ Live demo link - https://project-crowdfund.onrender.com/
 May take loading time upto 30s
 
 ## Technology Used
-![](https://skillicons.dev/icons?i=angular,express,nodejs,mongodb,ts,js,npm,css,html) <img src = "https://jwt.io/img/pic_logo.svg" width = 50px> <img src = "https://zod.dev/logo.svg" width = 50px>
+![](https://skillicons.dev/icons?i=angular,express,nodejs,mongodb,ts,js,npm,css,html,bootstrap) <img src = "https://jwt.io/img/pic_logo.svg" width = 50px> <img src = "https://zod.dev/logo.svg" width = 50px>
 
 | | |
 |---------|---------|
