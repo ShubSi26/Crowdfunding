@@ -18,7 +18,7 @@ May take loading time upto 30s
 
 ## Features
 - ## Authentication
-   The user can create its account and can perform operations like Login ans SignUp in the account. When the user Login Or SignUp, it will be provided a JWT Key Wivh will be used for Authentication purpose.
+   The user can create its account and can perform operations like Login ans SignUp in the account. When the user Login Or SignUp, it will be provided a JWT Key which will be used for Authentication purpose.
 - ## Add Project
   If the user is authenticated, he/she can navigate to the profile section where the project can be added and details of previously added project can be viewed.
 - ## Update Project
