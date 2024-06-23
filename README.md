@@ -1,9 +1,12 @@
 # CrowdFunding Application
 
 ![](https://github.com/ShubSi26/Crowdfunding-MEAN-Stack/blob/master/images/Screenshot%202024-06-22%20185600.jpg)
+Live demo link - https://project-crowdfund.onrender.com/ 
+
+May take loading time upto 30s
 
 ## Technology Used
-![](https://skillicons.dev/icons?i=angular,express,nodejs,mongodb,ts,js,npm,css,html) <img src = "https://jwt.io/img/pic_logo.svg" width = 50px> <img src = "https://zod.dev/logo.svg" width = 50px>
+![](https://skillicons.dev/icons?i=angular,express,nodejs,mongodb,ts,js,npm,css,html,bootstrap) <img src = "https://jwt.io/img/pic_logo.svg" width = 50px> <img src = "https://zod.dev/logo.svg" width = 50px>
 
 | | |
 |---------|---------|
@@ -15,7 +18,7 @@
 
 ## Features
 - ## Authentication
-   The user can create its account and can perform operations like Login ans SignUp in the account. When the user Login Or SignUp, it will be provided a JWT Key Wivh will be used for Authentication purpose.
+   The user can create its account and can perform operations like Login ans SignUp in the account. When the user Login Or SignUp, it will be provided a JWT Key which will be used for Authentication purpose.
 - ## Add Project
   If the user is authenticated, he/she can navigate to the profile section where the project can be added and details of previously added project can be viewed.
 - ## Update Project
@@ -26,11 +29,21 @@
   When navigated on progct, the user can see all the projects he have added and other people have added.
 - ## Payment
   When the user is on project detail page and when clicked on support button, it will be navigated to payment page where after filling the details and amount, if the user is authenticated the the a popup will apear that payment is done. The amount will be added to the project and owner can check it through the profile page.
-## Setup
+## Software Required
 - Install MongoDB
 - Install Node.js
 - Install Angular
-## Run Module
-- Runn command npm install in both of the direstory
-- cd to croudf directory and run command ng serve
-- cd to express directory and run command node server.js
+- Browser for interface
+## Setup
+- In the express folder, create a file name secret.js with the following code
+
+  ```
+   module.exports = {
+       jwtSecret: "your-secret-key",
+       mongourl: "your-mongodb-url"
+   };
+   ```
+- Replace "your-mongodb-url" with your working mongodb url and "your-secret-key" with your secret key.
+- Go to each folder and run command `npm i` to install all dependencies.
+- After creating secret.js, run command node server.js.
+- Change directory to croudf folder and run commnad ng serve.
